@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Head.scss'
 
 export class Head extends Component {
    
@@ -15,7 +16,7 @@ export class Head extends Component {
         let dia  = new Date().getUTCDate();
         return (
             <header>
-                <h3>Bienvenidos a {this.props.empresa? this.props.empresa:this.state.company} - {this.props.mensaje} - Dia:{dia}</h3>
+                <h3 className="head-title">Bienvenidos a {this.props.empresa? this.props.empresa:this.state.company} - {this.props.mensaje} - Dia:{dia}</h3>
             </header>
         )
     }

@@ -1,0 +1,37 @@
+@import '../../base';
+
+%type-style {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+    background-color: $primary-color;
+  }
+
+.claseCualquiera{
+    @extend %type-style;
+    background-color: aquamarine
+}
+
+.pCualquiera {
+    @extend %type-style;
+}
+
+.main {
+    font-size: 20px;
+    
+    &_h3{
+        color: black
+    }
+    &-div{
+        background-color: plum;
+
+        &-h3{
+            color: black;
+            border: black 1px solid;
+        }
+        &-p{
+            background-color: plum;
+        }
+    }
+
+}
