@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class Article extends Component {
   //rconst
@@ -12,7 +14,10 @@ class Article extends Component {
   
   render() {
     return <article>
-      <p> Nombre:{this.props.nombre}</p>
+      <p> Nombre: {this.props.usuario.name}, Edad: {this.props.usuario.edad}</p>
+      <IconButton aria-label="delete">
+          <DeleteIcon onClick={this.props.borrar}/>
+        </IconButton>
       </article>;
   }
 }

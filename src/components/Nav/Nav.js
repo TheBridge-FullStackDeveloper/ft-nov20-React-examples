@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import './Nav.scss'
 
 class Nav extends Component {
@@ -10,9 +11,11 @@ class Nav extends Component {
   render() {
     return <nav className={this.props.estilos}>
           <ul >
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/news">Noticias</Link></li>
+            <li><Link to="/staff">Quienes somos</Link></li>
+            <li><Link to="/contact">Contacto</Link></li>
+            <li><Link to="/form">Formulario</Link></li>
           </ul>
           </nav>
   }
