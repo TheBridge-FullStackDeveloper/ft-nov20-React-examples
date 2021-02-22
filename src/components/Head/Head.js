@@ -36,7 +36,7 @@ export class Head extends Component {
         return (
             <header>
                 <userContext.Consumer>
-                {user =>
+                {({user}) =>
                 <h3 className="head-title">Bienvenidos a {this.props.empresa? this.props.empresa:this.state.company} - {this.props.mensaje} - Son las :{this.state.date.toLocaleTimeString()} - User:{user}</h3>
             }
                 </userContext.Consumer>

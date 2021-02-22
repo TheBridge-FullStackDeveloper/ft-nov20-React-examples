@@ -16,6 +16,7 @@ class Nav extends Component {
             <li><Link to="/staff">Quienes somos</Link></li>
             <li><Link to="/contact">Contacto</Link></li>
             <li><Link to="/form">Formulario</Link></li>
+            <li><Link to="/contador">Contador</Link></li>
           </ul>
           </nav>
   }

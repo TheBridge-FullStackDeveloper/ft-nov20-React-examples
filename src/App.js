@@ -26,15 +26,19 @@ class App extends Component {
     super(props)
   
     this.state = {
-       user:"Alejandro!!!"
+       user:"Alejandro!!!",
+       cambiarUser:this.cambiarUser
     }
   }
-  
+  cambiarUser = (name) =>{
+    this.setState({user:name});
+  }
+
   render(){
     return (
       <div className="App">
 
-      <userContext.Provider value={this.state.user}> 
+      <userContext.Provider value={this.state}> 
           
         <h1 className="inverse"></h1>
           <Head mensaje="Seccion: home" empresa="Monstruos SA" />

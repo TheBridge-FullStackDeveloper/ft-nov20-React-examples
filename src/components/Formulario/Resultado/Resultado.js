@@ -14,7 +14,11 @@ class Resultado extends Component {
     let mensaje = this.props.mensaje?this.props.mensaje:"------";
     return <div>
       <userContext.Consumer>
-      {user => <p> Resultado de {user}: {mensaje}</p>}
+      {({user,cambiarUser}) => 
+      <>
+        <p> Resultado de {user}: {mensaje}</p>
+        <button onClick={()=>cambiarUser("Pepe")}>cambia Nombre</button>
+      </>}
      </userContext.Consumer>
       </div>;
   }

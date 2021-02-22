@@ -1,13 +1,16 @@
-import React, { Component } from "react";
+import React from 'react'
+//rafc --> arrow
+//rfc
 
-class News extends Component {
-  render() {
-    return <article>
-      <h3>{this.props.news.titulo}</h3>
-      <p>{this.props.news.contenido}</p>
-      <img src={this.props.news.url} alt=""/>
-    </article>;
-  }
+const News = (props) => {
+  return (
+    <article>
+      <h3>{props.news.titulo}</h3>
+      <p>{props.news.contenido}</p>
+      <img src={props.news.url} alt=""/>
+    </article>
+  )
 }
 
-export default News;
+export default News
+
